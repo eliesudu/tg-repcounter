@@ -8,12 +8,10 @@
 # backend folder
 /src/backend/src/.env
 /src/backend/node_modules
-/src/backend/package-lock.json
 /src/backend/package.json
 
 # frontend folder
 /src/frontend/node_modules
-/src/frontend/package-lock.json
 /src/frontend/package.json
 
 # testing
