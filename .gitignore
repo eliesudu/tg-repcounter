@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+# dotenv from backend
+/src/backend/src/.env
 # testing
 /coverage
 
