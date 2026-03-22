@@ -2,12 +2,14 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import { connectToDatabase } from './database.js';
+import usersRouter from './routes/users.js'
 const app = express();
 const port = process.env.PORT || 3000;
 
 
 app.use(cors());
 app.use(express.json());
+app.use('/api/users', usersRouter)
 
 connectToDatabase();
 app.get('/health',  (req, res) => {
