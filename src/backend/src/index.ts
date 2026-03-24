@@ -3,13 +3,17 @@ import express from 'express';
 import cors from 'cors';
 import { connectToDatabase } from './database.js';
 import usersRouter from './routes/users.js'
+import workoutsRouter from './routes/workouts.js'
+import exercisesRouter from './routes/exercises.js'
 const app = express();
 const port = process.env.PORT || 3000;
 
 
 app.use(cors());
 app.use(express.json());
-app.use('/api/users', usersRouter)
+app.use('/api/users', usersRouter);
+app.use('/api/workouts', workoutsRouter);
+app.use('/api/exercises', exercisesRouter);
 
 connectToDatabase();
 app.get('/health',  (req, res) => {
