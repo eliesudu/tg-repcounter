@@ -5,6 +5,7 @@ import { connectToDatabase } from './database.js';
 import usersRouter from './routes/users.js'
 import workoutsRouter from './routes/workouts.js'
 import exercisesRouter from './routes/exercises.js'
+
 const app = express();
 const port = process.env.PORT || 3000;
 

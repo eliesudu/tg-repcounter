@@ -7,9 +7,9 @@ const workoutSchema = new Schema({
         exercise_id: { type: Schema.Types.ObjectId, ref: 'Exercise', required: true },
         sets: [
             {
-            reps: { type: Number, required: true },
-            weight: { type: Number, required: false },
-            duration: { type: Number, required: false }
+            reps: { type: Number, required: true, min: 1},
+            weight: { type: Number, required: false, min: 0},
+            duration: { type: Number, required: false, min: 0 }
         }]
     }],
     created_at: { type: Date, default: Date.now }
