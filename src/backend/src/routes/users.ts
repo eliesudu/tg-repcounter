@@ -5,11 +5,13 @@ const router = express.Router()
 
 router.get('/', (req, res) => {
     console.log("Router is funcs")
+    const plan = req.query.plan as string;
     const telegram_id = req.query.telegram_id as string;
 
     // Validate the presence of telegram_id
     if (!telegram_id) {
         return res.status(400).json({ error: 'telegram_id query parameter is required' });
+
     }
 
     // Query user from database 
@@ -18,6 +20,7 @@ router.get('/', (req, res) => {
             if (!user) {
                 return res.status(404).json({ error: 'User not found' });
             }
+            console.log("Users plan: ", plan)
             return res.status(200).json(user);
         })
         .catch(error => {

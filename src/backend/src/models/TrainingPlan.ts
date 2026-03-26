@@ -1,12 +1,12 @@
 import {Schema, model} from 'mongoose';
 
-const exerciseSchema = new Schema({
+const trainingPlanSchema = new Schema({
     name: { type: String, required: true },
     description: { type: String },
-    workouts: [{ type: Schema.Types.ObjectId, ref: 'Workout' }, {}],
+    workouts: [{ type: Schema.Types.ObjectId, ref: 'Workout' }],
     created_at: { type: Date, default: Date.now }
-});
+})
 
-const ExerciseModel = model('Exercise', exerciseSchema);
+const TrainingPlanModel = model('TrainingPlan', trainingPlanSchema)
 
-export default ExerciseModel
+export default TrainingPlanModel
