@@ -22,7 +22,6 @@ router.post('/', async (req, res) => {
         console.error('Error creating workout:', error);
         return res.status(500).json({ error: 'An error occurred while creating the workout' });
     }
-
 })
 
 export default router
