@@ -16,7 +16,7 @@ app.use(express.json());
 app.use('/api/users', usersRouter);
 app.use('/api/workouts', workoutsRouter);
 app.use('/api/exercises', exercisesRouter);
-app.use('/api/training-plans', );
+app.use('/api/training-plans', trainingPlansRouter);
 
 connectToDatabase();
 app.get('/health',  (req, res) => {

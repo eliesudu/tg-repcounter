@@ -6,11 +6,7 @@ const router = express.Router()
 router.get('/userPlans', async (req, res) => {
     const telegram_id = req.query.telegram_id as string
     const objId = req.query.objId as string
-
-    if (!objId || !telegram_id) {
-        return res.status(404).json({error: "plan not found"})
-    }
-
+    return res.send("Router is funcs")
 })
 
 router.post('/', async (req, res) => {
